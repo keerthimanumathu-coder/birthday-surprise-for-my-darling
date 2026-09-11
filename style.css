@@ -1,0 +1,1254 @@
+/* ================================
+   🌌 BIRTHDAY SURPRISE WEBSITE
+   DARK NIGHT SKY THEME
+================================ */
+
+/* ---------- BASIC ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    background: #050510;
+    color: white;
+}
+
+
+/* ================================
+   🌙 MOON
+================================ */
+
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: #fff8d6;
+
+    top: 6%;
+    right: 8%;
+
+    box-shadow:
+        0 0 15px #fff8d6,
+        0 0 35px rgba(255, 248, 214, 0.7),
+        0 0 70px rgba(255, 248, 214, 0.35);
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* ================================
+   ⭐ MOVING STARS
+================================ */
+
+body::before {
+    content: "✦ ✧ ⋆ ✦ ⋆ ✧ ✦ ⋆ ✧ ✦ ⋆ ✧ ✦ ⋆";
+
+    white-space: nowrap;
+    position: fixed;
+    inset: 0;
+
+    font-size: 18px;
+    line-height: 70px;
+    letter-spacing: 18px;
+
+    color: white;
+    opacity: 0.65;
+
+    z-index: 1;
+    pointer-events: none;
+
+    animation: starsMove 7s ease-in-out infinite alternate;
+}
+@keyframes starsMove {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-20px);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(10px);
+        opacity: 0.5;
+    }
+}
+
+
+/* ================================
+   ✨ TWINKLING EFFECT
+================================ */
+
+@keyframes twinkle {
+
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+
+/* ================================
+   📄 PAGES
+================================ */
+
+.page {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    overflow-y: auto;
+
+    opacity: 0;
+
+    transform: scale(0.96);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+    z-index: 3;
+}
+
+.page.active {
+
+    display: flex;
+
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* ================================
+   🌌 DIFFERENT BACKGROUNDS
+================================ */
+
+.page0 {
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #28133f 0%,
+            transparent 35%
+        ),
+        #050510;
+}
+
+.page1 {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #521b55 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #182b5c 0%,
+            transparent 40%
+        ),
+        #070714;
+}
+
+.page2 {
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            #49205c 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            #172d55 0%,
+            transparent 40%
+        ),
+        #050511;
+}
+
+.page3 {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #4e174d 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            #142b59 0%,
+            transparent 40%
+        ),
+        #060612;
+}
+
+.page4 {
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            #541d50 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            #192e5a 0%,
+            transparent 40%
+        ),
+        #070713;
+}
+
+.page5 {
+    background:
+        radial-gradient(
+            circle at 25% 25%,
+            #431652 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 75% 75%,
+            #162b58 0%,
+            transparent 40%
+        ),
+        #050510;
+}
+
+.page6 {
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            #581a4d 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 25% 80%,
+            #172956 0%,
+            transparent 40%
+        ),
+        #060611;
+}
+
+.page7 {
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #4b1755 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 75%,
+            #152b58 0%,
+            transparent 40%
+        ),
+        #070714;
+}
+
+.page8 {
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            #551b50 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            #192d59 0%,
+            transparent 40%
+        ),
+        #050511;
+}
+
+.page9 {
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #5a194f 0%,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            #152d5b 0%,
+            transparent 40%
+        ),
+        #04040e;
+}
+
+
+/* ================================
+   ☄️ SHOOTING STAR
+================================ */
+
+.page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            white,
+            rgba(255,255,255,0)
+        );
+
+    top: 18%;
+    left: -160px;
+
+    transform: rotate(-25deg);
+
+    opacity: 0;
+
+    animation:
+        shootingStar 5s linear infinite;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* SECOND SHOOTING STAR */
+
+.page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            white,
+            rgba(255,255,255,0)
+        );
+
+    top: 43%;
+    left: -130px;
+
+    transform: rotate(-25deg);
+
+    opacity: 0;
+
+    animation:
+        shootingStar2 7s linear infinite 2s;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+@keyframes shootingStar {
+
+    0% {
+        left: -160px;
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    30% {
+        left: 120%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 120%;
+        opacity: 0;
+    }
+}
+
+
+@keyframes shootingStar2 {
+
+    0% {
+        left: -130px;
+        opacity: 0;
+    }
+
+    8% {
+        opacity: 1;
+    }
+
+    30% {
+        left: 120%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 120%;
+        opacity: 0;
+    }
+}
+
+
+/* ================================
+   📦 CONTENT
+================================ */
+
+.content {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+    max-width: 700px;
+
+    padding: 25px;
+
+}
+
+
+/* ================================
+   💕 HEADINGS
+================================ */
+h1,
+h2,
+h3 {
+    font-family: "Lobster", cursive;
+    font-weight: 400;
+}
+
+h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 18px;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.4),
+        0 0 25px rgba(255,100,200,0.35);
+}
+
+h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+h3 {
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+p {
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   🔐 SECRET CODE
+================================ */
+
+input {
+
+    width: 220px;
+
+    padding: 13px 18px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    margin: 15px 0;
+
+    background: rgba(255,255,255,0.95);
+
+    color: #222;
+}
+
+
+/* ================================
+   🔘 BUTTONS
+================================ */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #4b164c;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 8px 25px rgba(255,255,255,0.3);
+}
+
+button:active {
+
+    transform: scale(0.96);
+}
+
+
+/* ================================
+   💕 HEART
+================================ */
+
+.heart {
+
+    font-size: 70px;
+
+    animation: heartBeat 1.4s infinite;
+}
+
+@keyframes heartBeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ================================
+   💗 TWO YEARS
+================================ */
+
+.two-years {
+
+    font-size: 100px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff8fc7,
+            #ffffff,
+            #d8b4ff
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 30px rgba(255,120,200,0.3);
+}
+
+
+/* ================================
+   ⏳ COUNTER
+================================ */
+
+.counter {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin: 20px 0;
+}
+
+.counter-box {
+
+    min-width: 85px;
+
+    padding: 12px;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+.counter-box span {
+
+    display: block;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.counter-box small {
+
+    font-size: 12px;
+
+    opacity: 0.8;
+}
+
+
+/* ================================
+   📸 PHOTO GALLERY
+================================ */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    max-height: 60vh;
+
+    overflow-y: auto;
+
+    padding: 8px;
+}
+
+.gallery img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    border: 2px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.3);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.gallery img:hover {
+
+    transform: scale(1.04);
+}
+
+
+/* ================================
+   💌 QUOTES
+================================ */
+
+.quote {
+
+    background:
+        rgba(255,255,255,0.1);
+
+    border-left:
+        4px solid #ff9ed1;
+
+    padding: 18px;
+
+    margin: 15px 0;
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(8px);
+
+    font-style: italic;
+}
+
+
+/* ================================
+   🏆 AWARDS
+================================ */
+
+.award {
+
+    background:
+        rgba(255,255,255,0.1);
+
+    border:
+
+        1px solid
+        rgba(255,255,255,0.15);
+
+    padding: 16px;
+
+    margin: 10px 0;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.award:hover {
+
+    transform:
+        translateX(5px);
+}
+
+.award h3 {
+
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   🎁 FINAL PHOTO
+================================ */
+
+.final-photo {
+
+    width: 230px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border:
+        3px solid
+        rgba(255,255,255,0.8);
+
+    box-shadow:
+        0 0 25px rgba(255,150,220,0.5),
+        0 0 60px rgba(120,150,255,0.25);
+
+    margin: 20px auto;
+
+    display: block;
+
+    animation:
+        photoGlow 3s infinite alternate;
+}
+
+@keyframes photoGlow {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
+
+/* ================================
+   🎉 CONFETTI
+================================ */
+
+.confetti {
+
+    position: fixed;
+
+    top: -20px;
+
+    font-size: 20px;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* ================================
+   ✨ GLASS EFFECT
+================================ */
+
+.glass {
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.2);
+}
+
+
+/* ================================
+   📱 MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    body::after {
+
+        width: 55px;
+        height: 55px;
+
+        top: 5%;
+        right: 6%;
+    }
+
+    body::before {
+
+        font-size: 13px;
+
+        line-height: 55px;
+
+        letter-spacing: 8px;
+    }
+
+    .page {
+
+        padding: 15px;
+    }
+
+    .content {
+
+        padding: 15px;
+    }
+
+    h1 {
+
+        font-size: 30px;
+    }
+
+    h2 {
+
+        font-size: 25px;
+    }
+
+    h3 {
+
+        font-size: 20px;
+    }
+
+    p {
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .two-years {
+
+        font-size: 75px;
+    }
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .gallery img {
+
+        height: 140px;
+
+        border-radius: 12px;
+    }
+
+    .counter-box {
+
+        min-width: 70px;
+
+        padding: 9px;
+    }
+
+    .counter-box span {
+
+        font-size: 20px;
+    }
+
+    button {
+
+        font-size: 14px;
+
+        padding: 11px 20px;
+    }
+
+    .final-photo {
+
+        width: 190px;
+        height: 250px;
+    }
+}
+/* PAGE 9 FIX */
+
+.page9 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
+}
+
+.page9 .content {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+    text-align: center;
+}
+
+.page9 h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin: 20px 0 30px;
+    color: white;
+}
+
+.page9 .final-photo img {
+    width: 280px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.page9 .final-message {
+    color: white;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 20px auto;
+}
+
+.page9 .final-hearts {
+    font-size: 28px;
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+/* PAGE 8 FIX */
+
+.page8 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
+}
+
+.page8 .content {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+    text-align: center;
+}
+
+.page8 .final-message {
+    color: white;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px auto;
+    white-space: normal;
+}
+/* LOCK PAGE BUTTON FIX */
+
+.lock-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lock-card input {
+    display: block;
+    width: 280px;
+    margin: 15px 0 10px;
+}
+
+.lock-card button {
+    display: block;
+    margin: 10px 0;
+}
+/* ================= BALLOON MEMORY PAGE ================= */
+
+.page9 {
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-items: flex-start;
+}
+
+.balloon-page {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 0 70px;
+    text-align: center;
+}
+
+.balloon-hint {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.balloons {
+    min-height: 280px;
+    position: relative;
+}
+
+.balloon {
+    position: absolute;
+    border: none;
+    background: transparent;
+    font-size: 65px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: balloonFloat 2.5s ease-in-out infinite;
+}
+
+.balloon:hover {
+    transform: scale(1.2);
+}
+
+.balloon1 {
+    left: 8%;
+    top: 20px;
+}
+
+.balloon2 {
+    left: 28%;
+    top: 90px;
+}
+
+.balloon3 {
+    left: 48%;
+    top: 10px;
+}
+
+.balloon4 {
+    left: 67%;
+    top: 100px;
+}
+
+.balloon5 {
+    left: 82%;
+    top: 25px;
+}
+
+@keyframes balloonFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.balloon.pop {
+    animation: balloonPop 0.4s forwards;
+}
+
+@keyframes balloonPop {
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.memory-box {
+    display: none;
+    margin: 20px auto 40px;
+    padding: 20px;
+    max-width: 600px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    animation: memoryReveal 0.8s ease;
+}
+
+.memory-box.show {
+    display: block;
+}
+
+.memory-box img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.memory-box h2 {
+    margin-bottom: 15px;
+}
+
+.memory-box p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+@keyframes memoryReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.last-surprise {
+    display: none;
+    margin-top: 30px;
+    padding: 30px 20px;
+}
+
+.last-surprise.show {
+    display: block;
+    animation: memoryReveal 1s ease;
+}
+
+.last-surprise h2 {
+    font-size: 35px;
+}
+
+.last-surprise p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+
+    .balloon {
+        font-size: 50px;
+    }
+
+    .balloon1 {
+        left: 3%;
+    }
+
+    .balloon2 {
+        left: 25%;
+    }
+
+    .balloon3 {
+        left: 47%;
+    }
+
+    .balloon4 {
+        left: 68%;
+    }
+
+    .balloon5 {
+        left: 82%;
+    }
+
+}

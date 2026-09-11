@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little Story ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- CONFETTI -->
+<div id="confetti-container"></div>
+
+<!-- MUSIC -->
+<audio id="bgmusic" autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ================= LOCK PAGE ================= -->
+
+<section class="page lock-page active" id="page0">
+
+    <div class="card lock-card">
+
+        <div class="big-heart">💗</div>
+
+        <h1>A Little Surprise</h1>
+
+        <p>
+            Some memories are too special<br>
+            to open without a secret code...
+        </p>
+
+        <input
+            type="password"
+            id="secretCode"
+            placeholder="Enter Secret Code"
+            maxlength="4"
+        >
+
+        <button onclick="unlock()">Unlock 💕</button>
+
+        <p id="error"></p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 1 ================= -->
+
+<section class="page page1" id="page1">
+
+    <div class="content">
+
+        <p class="small-title">A LITTLE STORY ABOUT US</p>
+
+        <h1>Where Everything Started ❤️</h1>
+
+        <p class="main-text">
+            Every beautiful story has a beginning...
+            ours started on
+        </p>
+
+        <div class="date-box">
+            <span>28</span>
+            <small>JULY</small>
+            <span>2024</span>
+        </div>
+
+        <p class="main-text">
+            The day we met for the first time.
+            And somehow, that one day became the beginning
+            of so many beautiful memories.
+        </p>
+
+        <button onclick="nextPage(2)">
+            Our First Memory ➜
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 2 ================= -->
+
+<section class="page page2" id="page2">
+
+    <div class="content">
+
+        <div class="memory-icon">🤝</div>
+
+        <h1>That First Hand-Hold</h1>
+
+        <p class="main-text">
+            July 28, 2024 wasn't just the day we met.
+        </p>
+
+        <div class="highlight">
+            It was also the first time<br>
+            we held hands. ❤️
+        </div>
+
+        <p class="main-text">
+            A small moment maybe...
+            but a memory that became unforgettable.
+        </p>
+
+        <button onclick="nextPage(3)">
+            Two Years Later ➜
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 3 ================= -->
+
+<section class="page page3" id="page3">
+
+    <div class="content">
+
+        <p class="small-title">OUR JOURNEY</p>
+
+        <h1>2 Years of Us 💕</h1>
+
+        <div class="two-years">
+            <strong>2</strong>
+            <span>YEARS</span>
+        </div>
+
+        <p class="main-text">
+            Two years of talking,<br>
+            laughing, fighting, annoying each other,
+            making memories and still being there.
+        </p>
+
+        <div class="counter-box">
+
+            <div>
+                <span id="years">2</span>
+                <small>Years</small>
+            </div>
+
+            <div>
+                <span id="days">0</span>
+                <small>Days</small>
+            </div>
+
+            <div>
+                <span id="hours">0</span>
+                <small>Hours</small>
+            </div>
+
+            <div>
+                <span id="minutes">0</span>
+                <small>Minutes</small>
+            </div>
+
+            <div>
+                <span id="seconds">0</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <button onclick="nextPage(4)">
+            See Our Memories 📸
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 4 ================= -->
+
+<section class="page page4" id="page4">
+
+    <div class="content">
+
+        <h1>Our Memories 📸</h1>
+
+        <p>
+            Some moments become memories.
+            Some memories become forever.
+        </p>
+
+        <div class="gallery">
+
+            <img src="photos/photo1.jpg">
+            <img src="photos/photo2.jpg">
+            <img src="photos/photo3.jpg">
+            <img src="photos/photo4.jpg">
+            <img src="photos/photo5.jpg">
+            <img src="photos/photo6.jpg">
+            <img src="photos/photo7.jpg">
+            <img src="photos/photo8.jpg">
+            <img src="photos/photo9.jpg">
+            <img src="photos/photo10.jpg">
+
+        </div>
+
+        <button onclick="nextPage(5)">
+            A Few Words 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 5 ================= -->
+
+<section class="page page5" id="page5">
+
+    <div class="content">
+
+        <p class="small-title">FOR YOU</p>
+
+        <h1>Little Quotes 💕</h1>
+
+        <div class="quote-card">
+            <p>
+                "Some people become special
+                without even trying."
+            </p>
+        </div>
+
+        <div class="quote-card">
+            <p>
+                "The best memories are the ones
+                we never planned."
+            </p>
+        </div>
+
+        <div class="quote-card">
+            <p>
+                "Two years, countless memories,
+                and still more to come."
+            </p>
+        </div>
+
+        <div class="quote-card">
+            <p>
+                "Among all the people in this world,
+                some souls just feel different."
+            </p>
+        </div>
+
+        <button onclick="nextPage(6)">
+            Know Your Awards 😂
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 6 ================= -->
+
+<section class="page page6" id="page6">
+
+    <div class="content">
+
+        <h1>Your Official Awards 😂🏆</h1>
+
+        <div class="award">
+            🏆 <b>Best Fighting Partner</b>
+            <span>For starting tiny fights for absolutely no reason 😂</span>
+        </div>
+
+        <div class="award">
+            🏆 <b>Most Annoying Person</b>
+            <span>Congratulations! Nobody can beat you 😭😂</span>
+        </div>
+
+        <div class="award">
+            🏆 <b>Best Anger Award</b>
+            <span>One small thing = full angry mode 🔥😂</span>
+        </div>
+
+        <div class="award">
+            🏆 <b>Unlimited Comedy Award</b>
+            <span>For making every boring moment funny.</span>
+        </div>
+
+        <div class="award">
+            🏆 <b>2 Years Survived Award</b>
+            <span>Still together after all those fights 😂❤️</span>
+        </div>
+
+        <div class="award special-award">
+            👑 <b>Prettiest Soul Award</b>
+            <span>
+                For being one of the most beautiful
+                souls in my life. ❤️
+            </span>
+        </div>
+
+        <button onclick="nextPage(7)">
+            One More Thing ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 7 ================= -->
+
+<section class="page page7" id="page7">
+
+    <div class="content">
+
+        <div class="big-heart">💗</div>
+
+        <h1>Why You Are Special</h1>
+
+        <p class="main-text">
+            You're funny.<br>
+            You're caring.<br>
+            Sometimes thingari 😂<br>
+            Sometimes full kopam 😤<br>
+            Sometimes alagadam 🥺<br>
+            And somehow... you make every memory special.
+        </p>
+
+        <div class="highlight">
+            You are my prettiest soul. ❤️
+        </div>
+
+        <button onclick="nextPage(8)">
+            Read My Heart 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE 8 ================= -->
+
+<section class="page page8" id="page8">
+
+    <div class="content feelings">
+
+        <p class="small-title">FROM MY HEART</p>
+
+        <h1>For You ❤️</h1>
+
+        <p>
+            Bangaram...
+        </p>
+
+        <p>
+            Nuvvu rakamundu vere life,
+            vachaka vere life.
+        </p>
+
+        <p>
+            Time gap dorikite chalu,
+            neetho kalisi unna memories
+            gurthuku vastayi.
+        </p>
+
+        <p>
+            Oorilo unte yeppudu yeppudu kaludhama
+            ani wait chesta...
+        </p>
+
+        <p>
+            Ado oka reason pettukoni
+            kalavali anipistundhi ninnu.
+        </p>
+
+        <p>
+            Chinna godava ayina pettukoni
+            matladali anipistundhi...
+        </p>
+
+        <p>
+            Konni sarulu yedipinchali...
+            malli aa yedupuni nenu odarchali...
+        </p>
+
+        <p>
+            Yedupu apesaka navvinchali...
+            navvu yekkuva ayite malli godava padali...
+        </p>
+
+        <p>
+            Kani yellappudu neethoney kalisi
+            undali anipistundhi.
+        </p>
+
+        <p>
+            Nenu chala mandi ammayilu tho
+            kalisi tiriga, matlada...
+            kani yevaritho unna aa feeling raledu,
+            radhu kuda.
+        </p>
+
+        <p>
+            Yendhuko telidhu...
+            ninnu kalavaka mundu tane na soulmate
+            anipinchedi na manasulo.
+        </p>
+
+        <p>
+            Ninnu kalisaka confirm ayiepoyindhi...
+            tane na true soulmate ani. ❤️
+        </p>
+
+        <button onclick="nextPage(9)">
+            Last One More Surprise 🎁
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- ================= PAGE 9 ================= -->
+
+<section class="page page9" id="page9">
+
+    <div class="content balloon-page">
+
+        <p class="small-title">ONE LAST SURPRISE... 🎁</p>
+
+        <h1>5 Balloons • 5 Memories 🎈</h1>
+
+        <p class="balloon-hint">
+            Each balloon has a little memory hidden inside... 💗
+        </p>
+
+        <div class="balloons">
+
+            <button class="balloon balloon1" onclick="openMemory(1)">
+                🎈
+            </button>
+
+            <button class="balloon balloon2" onclick="openMemory(2)">
+                🎈
+            </button>
+
+            <button class="balloon balloon3" onclick="openMemory(3)">
+                🎈
+            </button>
+
+            <button class="balloon balloon4" onclick="openMemory(4)">
+                🎈
+            </button>
+
+            <button class="balloon balloon5" onclick="openMemory(5)">
+                🎈
+            </button>
+
+        </div>
+
+        <!-- MEMORY 1 -->
+        <div class="memory-box" id="memory1">
+            <img src="photos/final1.jpg">
+
+            <h2>Where Everything Started ❤️</h2>
+
+            <p>
+                July 28, 2024... the day everything started.
+                A simple meeting became one of the most special
+                memories in our story. ❤️
+            </p>
+        </div>
+
+        <!-- MEMORY 2 -->
+        <div class="memory-box" id="memory2">
+            <img src="photos/final2.jpg">
+
+            <h2>That Beautiful Memory ✨</h2>
+
+            <p>
+                Some moments may look small,
+                but they stay in our hearts forever.
+                This is one of those memories. 🥹❤️
+            </p>
+        </div>
+
+        <!-- MEMORY 3 -->
+        <div class="memory-box" id="memory3">
+            <img src="photos/final3.jpg">
+
+            <h2>Our Crazy Moments 😂</h2>
+
+            <p>
+                Fights, teasing, laughing and annoying each other...
+                somehow every crazy moment became a beautiful memory. 😂❤️
+            </p>
+        </div>
+
+        <!-- MEMORY 4 -->
+        <div class="memory-box" id="memory4">
+            <img src="photos/final4.jpg">
+
+            <h2>The Caring Side 💗</h2>
+
+            <p>
+                It's not always about big things.
+                Sometimes the smallest care and little efforts
+                mean everything. 💗
+            </p>
+        </div>
+
+        <!-- MEMORY 5 -->
+        <div class="memory-box" id="memory5">
+            <img src="photos/final5.jpg">
+
+            <h2>Two Years & Counting ❤️</h2>
+
+            <p>
+                Two years of memories, laughs, fights,
+                caring and countless little moments...
+                and this is just another beautiful chapter. ❤️
+            </p>
+        </div>
+
+        <div class="last-surprise" id="lastSurprise">
+
+            <h2>And Finally... 🎂</h2>
+
+            <p>
+                Happy Birthday to my prettiest soul. ❤️
+                <br><br>
+                Two years, countless memories,
+                and so many more moments waiting to be made. ✨
+            </p>
+
+            <div class="final-hearts">
+                ❤️ 💗 ❤️ 💗 ❤️
+            </div>
+            <div class="final-hearts">
+    ❤️ ❤️ ❤️ ❤️ ❤️
+</div>
+
+<p>
+Happy Birthday bangarammm ❤️🎂✨
+<br><br>
+
+Nuvvu naa life lo vachaka, chala things change ayyayi…
+normal days kuda special memories aipoyayi. 🥹❤️
+Nuvvunte happiness automatic ga vachestundi,
+nuvvu matladithe mood automatic ga set aipothundi. 😌💗
+
+<br><br>
+
+Manam enni silly fights chesina, enni times argue chesina…
+last ki malli matladukokunda undalem kadaa 😂❤️
+Adhe mana relationship special thing anukunta.
+
+<br><br>
+
+“Some people make your life beautiful just by being in it…
+and you are that person for me.” ❤️✨
+
+<br><br>
+
+Today nee day kabatti full ga enjoy cheyyi! 😌🎂
+
+<br><br>
+
+⚠️ One important warning 😂
+Birthday vachindani age perigindhi ani over action cheyyaku…
+nuvvu naaku eppatiki same crazy person eh! 😂❤️
+
+<br><br>
+
+🩷😘🫂
+<br><br>
+
+🏆 My Favourite Award:
+<br>
+Best Person Who Can Annoy Me, Make Me Laugh,
+Make Me Angry & Still Make Me Love Them More 😂❤️
+
+<br><br>
+
+Nuvvu happy ga undali, nee dreams anni fulfill avvali,
+and nee face lo aa smile eppudu undali. 🥰
+
+<br><br>
+
+Happy Birthday once again, bangaram ❤️🎂
+<br><br>
+
+Thank you for being one of the most beautiful parts of my life.
+<br><br>
+
+I hope this year gives you lots of happiness, success,
+memories and… obviously konchem sense kuda 😂😂❤️
+
+<br><br>
+
+Love youuu soo muchhh...❤️✨
+</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
